@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "discord.js": "^13.1.0"
+  },
+  "name": "peng-bot",
+  "version": "2.0.1",
+  "description": "Ein Spaß Bot der auf Peng reagiert",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DavidCraft",
+  "license": "ISC"
+}
