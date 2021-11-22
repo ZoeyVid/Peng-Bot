@@ -30,6 +30,7 @@ Edit the configuration and replace `your-token-goes-here` with your Bot tooken f
 ```sh
 nano config.json
 ```
+Save it with ctrl + x and ENTER <br>
 Make a test run:
 ```sh
 node main.js
