@@ -1,16 +1,15 @@
-# Peng-Bot
+# [Peng-Bot](https://github.com/SanCraftDev/Peng-Bot)
 
 A Bot that reacts to messages that starts with ping, pewpew or peng... 
 
-## Invite Link: 
-https://discord.com/oauth2/authorize?client_id=742096151301455882&permissions=274877908992&scope=applications.commands%20bot
+## [Invite Link](https://discord.com/oauth2/authorize?client_id=742096151301455882&permissions=274877908992&scope=applications.commands%20bot)
 
 ## Run it for your own (Debian):
-Install Nodejs v16 if you do not have done this already:
+Install Nodejs v16 / v17 if you do not have done this already:
 ```sh
 apt update && apt upgrade -y && apt autoremove -y
 apt install curl
-curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
 apt update
 apt-get install nodejs -y
 npm config set fund false --global
@@ -26,7 +25,7 @@ git clone https://github.com/SanCraftDev/Peng-Bot.git
 cd Peng-Bot
 npm i
 ```
-Edit the configuration and replace `your-token-goes-here` with your Bot tooken from https://discord.com/developers/applications:
+Edit the configuration and replace `your-token-goes-here` with your Bot tooken from [here](https://discord.com/developers/applications):
 ```sh
 nano config.json
 ```
