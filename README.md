@@ -9,7 +9,7 @@ Install Nodejs v16 / v17 if you do not have done this already:
 ```sh
 apt update && apt upgrade -y && apt autoremove -y
 apt install curl
-curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
+curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
 apt update
 apt-get install nodejs -y
 npm config set fund false --global
