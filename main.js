@@ -3,7 +3,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const { token } = require('./config.json');
 
 client.once('ready', () => {
-    console.log("Logged in as ${client.user.tag}!");
+    console.log(`Ready! Logged in as ${client.user.tag}`);
 	client.user.setActivity("Peng", { type: 'LISTENING' });
 });
 
