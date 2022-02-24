@@ -5,11 +5,6 @@ const { token } = require('./config.json');
 client.once('ready', () => {
     console.log(`Ready! Logged in as ${client.user.tag}`);
 	client.user.setActivity("Peng", { type: 'LISTENING' });
-    const data = {
-        name: 'peng',
-        description: "Peng!",
-    };
-    client.application?.commands.create(data);
 });
 
 client.on("messageCreate", message => {
@@ -88,18 +83,18 @@ client.on('interactionCreate', interaction => {
             if(randomuser.nickname) var randomname = randomuser.nickname;
             if(!randomuser.nickname) var randomname = randomuser.displayName;
             if(pengstate === 1) {
-                interaction.reply({ content: "Peng! Leider wurde <@" + interaction.user.username + "> von **" + randomname + "** erwischt!"});
+                interaction.reply({ content: "Peng! Leider wurde " + interaction.user.username + " von **" + randomname + "** erwischt!"});
             } else {
-                interaction.reply({ content: "Peng! Leider wurde **" + randomname + "** von <@" + interaction.user.username + "> erwischt!"});
+                interaction.reply({ content: "Peng! Leider wurde **" + randomname + "** von " + interaction.user.username + " erwischt!"});
             };
         } else {
             var min = 1;
             var max = 2;
             var pengstate = Math.round(Math.random() * (max - min)) + min;
             if(pengstate === 1) {
-                interaction.reply({ content: "Peng! Leider wurde <@" + interaction.user.username + "> von **" + client.username + "** erwischt!"});
+                interaction.reply({ content: "Peng! Leider wurde " + interaction.user.username + " von **" + client.user.username + "** erwischt!"});
             } else {
-                interaction.reply({ content: "Peng! Leider wurde **" + client.username + "** von <@" + interaction.user.username + "> erwischt!"});
+                interaction.reply({ content: "Peng! Leider wurde **" + client.user.username + "** von " + interaction.user.username + " erwischt!"});
             };
         }
     }
