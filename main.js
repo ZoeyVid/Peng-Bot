@@ -5,6 +5,11 @@ const { token } = require('./config.json');
 client.once('ready', () => {
     console.log(`Ready! Logged in as ${client.user.tag}`);
 	client.user.setActivity("Peng", { type: 'LISTENING' });
+    const data = {
+        name: 'peng',
+        description: "Peng!",
+    };
+    client.application?.commands.create(data);
 });
 
 client.on("messageCreate", message => {
