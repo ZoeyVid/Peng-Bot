@@ -72,6 +72,32 @@ client.on('interactionCreate', interaction => {
 	if(interaction.commandName === "invite") {
         interaction.reply({ content: client.generateInvite({scopes: ['applications.commands', 'bot'],}), ephemeral: true });
     }
+    if(interaction.commandName === "peng") {
+        if(interaction.inGuild()) {
+            interaction.guild.members.fetch();
+            var userliste = Array.from(interaction.guild.members.cache.values());
+            var randomuser = userliste[Math.floor(Math.random() * userliste.length)];
+            var min = 1;
+            var max = 2;
+            var pengstate = Math.round(Math.random() * (max - min)) + min;
+            if(randomuser.nickname) var randomname = randomuser.nickname;
+            if(!randomuser.nickname) var randomname = randomuser.displayName;
+            if(pengstate === 1) {
+                interaction.reply({ content: "Peng! Leider wurde <@" + interaction.user.username + "> von **" + randomname + "** erwischt!"});
+            } else {
+                interaction.reply({ content: "Peng! Leider wurde **" + randomname + "** von <@" + interaction.user.username + "> erwischt!"});
+            };
+        } else {
+            var min = 1;
+            var max = 2;
+            var pengstate = Math.round(Math.random() * (max - min)) + min;
+            if(pengstate === 1) {
+                interaction.reply({ content: "Peng! Leider wurde <@" + interaction.user.username + "> von **" + client.username + "** erwischt!"});
+            } else {
+                interaction.reply({ content: "Peng! Leider wurde **" + client.username + "** von <@" + interaction.user.username + "> erwischt!"});
+            };
+        }
+    }
 });
 
 client.login(token);
