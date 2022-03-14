@@ -1,6 +1,7 @@
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_INTEGRATIONS, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGES] });
 const { token } = require('./config.json');
+const http = require('http');
 
 client.once('ready', () => {
     console.log(`Ready! Logged in as ${client.user.tag}`);
@@ -73,5 +74,13 @@ client.on('interactionCreate', interaction => {
         interaction.reply({ content: client.generateInvite({scopes: ['applications.commands', 'bot'],}), ephemeral: true });
     }
 });
+
+http.createServer((request, response) => {
+        response.writeHead(200, {
+            'Content-Type': 'text/plain; charset=utf-8'
+        });
+        response.write("Peng!");
+        response.end();
+    }).listen(2021);
 
 client.login(token);
