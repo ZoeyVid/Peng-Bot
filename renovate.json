@@ -2,10 +2,7 @@
   "extends": [
     "config:base"
   ],
-  "baseBranches": [
-    "main",
-    "old"
-  ],
+  "baseBranches": [],
   "includeForks": true,
   "automerge": true
 }
