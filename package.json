@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "discord.js": "14.1.1",
+    "discord.js": "14.1.2",
     "npm": "8.15.1"
   },
   "name": "peng-bot",
