@@ -1,6 +1,6 @@
 const { Client, GatewayIntentBits } = require("discord.js");
 const client = new Client({
-  intents: [
+  intents: [ //Nochmal genauer anschauen
     GatewayIntentBits.GUILDS,
     GatewayIntentBits.GUILDINTEGRATIONS,
     GatewayIntentBits.GUILDMEMBERS,
