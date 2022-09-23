@@ -4,7 +4,7 @@ A Bot that reacts to messages that starts with ping, pewpew or peng...
 
 ## [Invite Link](https://discord.com/oauth2/authorize?client_id=742096151301455882&permissions=274877908992&scope=applications.commands%20bot)
 
-## Run it for your own (Debian):
+## Run it for your own (Debian): **OUTDATED**
 
 Install Nodejs v16 / v17 if you do not have done this already:
 

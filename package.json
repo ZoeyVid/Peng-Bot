@@ -1,16 +1,12 @@
 {
   "dependencies": {
-    "discord.js": "14.4.0",
-    "npm": "8.19.2"
+    "discord.js": "14.4.0"
   },
   "name": "peng-bot",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Ein Spaß Bot der auf Peng reagiert",
   "main": "main.js",
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "DavidCraft",
-  "license": "ISC"
+  "author": "DavidCraftDev",
+  "license": "MPL-2.0"
 }
