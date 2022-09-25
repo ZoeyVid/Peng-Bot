@@ -33,9 +33,9 @@ client.on("messageCreate", async (message) => {
   if (randomUser.nickname) var randomName = randomUser.nickname;
   if (!randomUser.nickname) var randomName = randomUser.displayName;
   if(Math.round(Math.random() * (2 - 1)) + 1 == 1) {
-    message.reply("Peng! Leider wurde **" + randomName + "** von " + message.author.user + " erwischt!");
+    message.reply("Peng! Leider wurde **" + randomName + "** von <@" + message.author.id + "> erwischt!");
   } else {
-    message.reply("Peng! Leider wurde **" + message.author.user + "** von " + randomName + " erwischt!");
+    message.reply("Peng! Leider wurde <@" + message.author.id + "> von **" + randomName + "** erwischt!");
   };
 });
 
