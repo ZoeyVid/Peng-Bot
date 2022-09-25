@@ -18,7 +18,7 @@ client.once("ready", () => {
 
 client.on("messageCreate", async (message) => {
   if(!message.guild) return;
-  if(!message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
+  //if(!message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
   if(message.author.bot) return;
   if(!message.content.toLowerCase().startsWith("peng")) return; //In Zukunft mit Args arbeiten für Dynamic Commandes und bewusstes Peng
   message.react("🔫");
