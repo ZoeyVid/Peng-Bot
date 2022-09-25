@@ -17,6 +17,7 @@ client.once("ready", () => {
 });
 
 client.on("messageCreate", async (message) => {
+  console.log(message)
   if(!message.guild) return;
   //if(!message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
   if(message.author.bot) return;
@@ -51,19 +52,18 @@ client.on("interactionCreate", async (interaction) => {
       if (randomUser.nickname) var randomName = randomUser.nickname;
       if (!randomUser.nickname) var randomName = randomUser.displayName;
       if(Math.round(Math.random() * (2 - 1)) + 1 == 1) {
-        interaction.reply({ content: "Peng! Leider wurde **" + randomName + "** von " + interaction.user + " erwischt!", ephemeral: false });
+        interaction.reply({ content: "Peng! Leider wurde **" + randomName + "** von " + interaction.user.displayName + " erwischt!", ephemeral: false });
       } else {
-        interaction.reply({ content: "Peng! Leider wurde **" + interaction.user + "** von " + randomName + " erwischt!", ephemeral: false });
+        interaction.reply({ content: "Peng! Leider wurde **" + interaction.user.displayName + "** von " + randomName + " erwischt!", ephemeral: false });
       };
     } else {
       var userList = Array.from(client.users.cache.values());
       var randomUser = userList[Math.floor(Math.random() * userList.length)];
-      if (randomUser.nickname) var randomName = randomUser.nickname;
-      if (!randomUser.nickname) var randomName = randomUser.displayName;
+      var randomName = randomUser.displayName; //Fix in Future
       if(Math.round(Math.random() * (2 - 1)) + 1 == 1) {
-        interaction.reply({ content: "Peng! Leider wurde **" + randomName + "** von " + interaction.user + " erwischt!", ephemeral: false });
+        interaction.reply({ content: "Peng! Leider wurde **" + randomName + "** von " + interaction.user.displayName + " erwischt!", ephemeral: false });
       } else {
-        interaction.reply({ content: "Peng! Leider wurde **" + interaction.user + "** von " + randomName + " erwischt!", ephemeral: false });
+        interaction.reply({ content: "Peng! Leider wurde **" + interaction.user.displayName + "** von " + randomName + " erwischt!", ephemeral: false });
       };
     }
   }
