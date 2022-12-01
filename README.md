@@ -1,4 +1,4 @@
-# [Peng-Bot](https://github.com/SanCraftDev/Peng-Bot)
+# [Peng-Bot](https://github.com/ZoeyVid/Peng-Bot)
 
 A Bot that reacts to messages that starts with ping, pewpew or peng...
 
@@ -25,7 +25,7 @@ Download it and install requirements:
 apt update && apt upgrade -y && apt autoremove -y
 apt install git nano screen cron
 cd /home
-git clone https://github.com/SanCraftDev/Peng-Bot.git
+git clone https://github.com/ZoeyVid/Peng-Bot
 cd Peng-Bot
 npm i
 ```
