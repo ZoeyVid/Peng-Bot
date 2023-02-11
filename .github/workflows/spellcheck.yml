@@ -1,8 +1,5 @@
 name: reviewdog
-on:
-  push:
-  pull_request:
-  workflow_dispatch:
+on: [pull_request]
 jobs:
   misspell:
     name: runner / misspell
