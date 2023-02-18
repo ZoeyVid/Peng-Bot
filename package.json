@@ -3,7 +3,7 @@
     "discord.js": "14.7.1"
   },
   "overrides": {
-    "undici": "5.19.1"
+    "undici": "5.20.0"
   },
   "name": "peng-bot",
   "version": "3.0.0",
