@@ -18,14 +18,10 @@ client.once("ready", () => {
 });
 
 client.on("messageCreate", async (message) => {
-  console.log(message)
   if(!message.guild) return;
-  console.log("hmm1")
   //if(!message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
   if(message.author.bot) return;
-  console.log("hmm2")
   if(!message.content.toLowerCase().startsWith("peng")) return; //In Zukunft mit Args arbeiten für Dynamic Commandes und bewusstes Peng
-  console.log("hmm3")
   message.react("🔫");
   await message.guild.members.fetch();
   var userList = Array.from(message.guild.members.cache.values());
