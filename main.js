@@ -26,8 +26,9 @@ client.on("messageCreate", async (message) => {
   await message.guild.members.fetch();
   var userList = Array.from(message.guild.members.cache.values());
   var randomUser = userList[Math.floor(Math.random() * userList.length)];
-  if (randomUser.nickname) var randomName = randomUser.nickname;
-  if (!randomUser.nickname) var randomName = randomUser.displayName;
+  var randomName
+  if (randomUser.nickname) randomName = randomUser.nickname;
+  if (!randomUser.nickname) randomName = randomUser.displayName;
   if(Math.round(Math.random() * (2 - 1)) + 1 == 1) {
     message.reply("Peng! Leider wurde **" + randomName + "** von <@" + message.author.id + "> erwischt!");
   } else {
@@ -44,22 +45,25 @@ client.on("interactionCreate", async (interaction) => {
       ephemeral: true,
     });
   }
+  var userList
+  var randomUser
+  var randomName
   if (interaction.commandName === "peng") {
     if(interaction.inGuild()) {
       await interaction.guild.members.fetch();
-      var userList = Array.from(interaction.guild.members.cache.values());
-      var randomUser = userList[Math.floor(Math.random() * userList.length)];
-      if (randomUser.nickname) var randomName = randomUser.nickname;
-      if (!randomUser.nickname) var randomName = randomUser.displayName;
+      userList = Array.from(interaction.guild.members.cache.values());
+      randomUser = userList[Math.floor(Math.random() * userList.length)];
+      if (randomUser.nickname) randomName = randomUser.nickname;
+      if (!randomUser.nickname) randomName = randomUser.displayName;
       if(Math.round(Math.random() * (2 - 1)) + 1 == 1) {
         interaction.reply({ content: "Peng! Leider wurde **" + randomName + "** von " + interaction.user.username + " erwischt!", ephemeral: false });
       } else {
         interaction.reply({ content: "Peng! Leider wurde **" + interaction.user.username + "** von " + randomName + " erwischt!", ephemeral: false });
       };
     } else {
-      var userList = Array.from(client.users.cache.values());
-      var randomUser = userList[Math.floor(Math.random() * userList.length)];
-      var randomName = randomUser.displayName; //Fix in Future
+      userList = Array.from(client.users.cache.values());
+      randomUser = userList[Math.floor(Math.random() * userList.length)];
+      randomName = randomUser.displayName; //Fix in Future
       if(Math.round(Math.random() * (2 - 1)) + 1 == 1) {
         interaction.reply({ content: "Peng! Leider wurde **" + randomName + "** von " + interaction.user.username + " erwischt!", ephemeral: false });
       } else {
